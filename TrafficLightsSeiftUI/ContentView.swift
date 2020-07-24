@@ -8,49 +8,44 @@
 
 import SwiftUI
 
+enum CurrentLight {
+    case red, yellow, green
+}
+
 struct ContentView: View {
     
-    @State private var numbers = 0
+    @State private var buttonTitle = "START"
     
-    var body: some View {
+//    @State private var redLightState = 0.3
+//    @State private var yellowLightState = 0.3
+//    @State private var greenLightState = 0.3
+    
+    @State private var currentLight = CurrentLight.red
+    
+    private func nextColor() {
         
-        VStack {
-            ZStack {
-                ColorCircles()
-                    .padding(.top, 40)
-                
-                if numbers == 1 {
-                    RedCircle()
-                } else if numbers == 2 {
-                    YellowCircle()
-                } else if numbers == 3 {
-                    GreenCircle()
-                }
-            }
+//        let lightIsOn = 1.0
+//        let lightIsOff = 0.3
+        
+        switch currentLight {
             
-            Spacer()
+        case .red: currentLight = .yellow
             
-            Button(action: {
-                
-                self.numbers += 1
-                
-                if self.numbers > 3 {
-                    self.numbers = 1
-                }
-                
-            }) {
-                
-                if numbers == 0 {
-                    Text("Start")
-                        .font(.largeTitle)
-                        .padding(.bottom, 70)
-                    
-                } else {
-                    Text("Next")
-                        .font(.largeTitle)
-                        .padding(.bottom, 70)
-                }
-            }
+//            currentLight = .yellow
+//            greenLightState = lightIsOff
+//            redLightState = lightIsOn
+            
+        case .yellow: currentLight = .green
+            
+//            currentLight = .green
+//            redLightState = lightIsOff
+//            yellowLightState = lightIsOn
+            
+        case .green: currentLight = .red
+            
+//            currentLight = .red
+//            greenLightState = lightIsOn
+//            yellowLightState = lightIsOff
         }
     }
 }
@@ -58,5 +53,33 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension ContentView {
+    var body: some View {
+        ZStack {
+            Color(.black)
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack(spacing: 20) {
+                
+                ColorLight(color: .red, opacity: currentLight == .red ? 1 : 0.3)
+                ColorLight(color: .yellow, opacity: currentLight == .yellow ? 1 : 0.3)
+                ColorLight(color: .green, opacity: currentLight == .green ? 1 : 0.3)
+                
+//                ColorLight(color: .red, opacity: redLightState)
+//                ColorLight(color: .yellow, opacity: yellowLightState)
+//                ColorLight(color: .green, opacity: greenLightState)
+                
+                Spacer()
+                
+                ChangeColorButton(title: buttonTitle) {
+                    self.buttonTitle = "NEXT"
+                    self.nextColor()
+                }
+            }
+            .padding()
+        }
     }
 }

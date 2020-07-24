@@ -14,9 +14,8 @@
 		5602557524C728DE0058AB25 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5602557424C728DE0058AB25 /* Preview Assets.xcassets */; };
 		5602557824C728DE0058AB25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5602557624C728DE0058AB25 /* LaunchScreen.storyboard */; };
 		5602558024C72C7E0058AB25 /* ColorCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5602557F24C72C7E0058AB25 /* ColorCircles.swift */; };
-		561D11EC24C840BF00E6FDDB /* RedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D11EB24C840BF00E6FDDB /* RedCircle.swift */; };
-		561D11F024C843B700E6FDDB /* YellowCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D11EF24C843B700E6FDDB /* YellowCircle.swift */; };
-		561D11F224C8442100E6FDDB /* GreenCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D11F124C8442100E6FDDB /* GreenCircle.swift */; };
+		567561E324CA94EF000976FF /* ChangeColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567561E224CA94EF000976FF /* ChangeColorButton.swift */; };
+		567561E524CA9977000976FF /* ColorLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567561E424CA9977000976FF /* ColorLight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +28,8 @@
 		5602557724C728DE0058AB25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5602557924C728DE0058AB25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5602557F24C72C7E0058AB25 /* ColorCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircles.swift; sourceTree = "<group>"; };
-		561D11EB24C840BF00E6FDDB /* RedCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedCircle.swift; sourceTree = "<group>"; };
-		561D11EF24C843B700E6FDDB /* YellowCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowCircle.swift; sourceTree = "<group>"; };
-		561D11F124C8442100E6FDDB /* GreenCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenCircle.swift; sourceTree = SOURCE_ROOT; };
+		567561E224CA94EF000976FF /* ChangeColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColorButton.swift; sourceTree = "<group>"; };
+		567561E424CA9977000976FF /* ColorLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLight.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				5602556F24C728DD0058AB25 /* ContentView.swift */,
+				567561E424CA9977000976FF /* ColorLight.swift */,
+				567561E224CA94EF000976FF /* ChangeColorButton.swift */,
 				5602557F24C72C7E0058AB25 /* ColorCircles.swift */,
-				561D11EB24C840BF00E6FDDB /* RedCircle.swift */,
-				561D11EF24C843B700E6FDDB /* YellowCircle.swift */,
-				561D11F124C8442100E6FDDB /* GreenCircle.swift */,
 				5602556B24C728DD0058AB25 /* AppDelegate.swift */,
 				5602556D24C728DD0058AB25 /* SceneDelegate.swift */,
 				5602557124C728DE0058AB25 /* Assets.xcassets */,
@@ -158,13 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567561E524CA9977000976FF /* ColorLight.swift in Sources */,
 				5602556C24C728DD0058AB25 /* AppDelegate.swift in Sources */,
 				5602558024C72C7E0058AB25 /* ColorCircles.swift in Sources */,
 				5602556E24C728DD0058AB25 /* SceneDelegate.swift in Sources */,
-				561D11EC24C840BF00E6FDDB /* RedCircle.swift in Sources */,
-				561D11F224C8442100E6FDDB /* GreenCircle.swift in Sources */,
+				567561E324CA94EF000976FF /* ChangeColorButton.swift in Sources */,
 				5602557024C728DD0058AB25 /* ContentView.swift in Sources */,
-				561D11F024C843B700E6FDDB /* YellowCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.ukolovegor23-yandex.TrafficLightsSwiftUI";
 				PRODUCT_NAME = TrafficLightsSwiftUI;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.ukolovegor23-yandex.TrafficLightsSwiftUI";
 				PRODUCT_NAME = TrafficLightsSwiftUI;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
